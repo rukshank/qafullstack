@@ -16,3 +16,8 @@ resource "aws_instance" "rukshankweb" {
 }
 
 }
+
+output "instance_ips"
+   {
+     value = ["${aws_instance.rukshankweb.*.public_ip}"]
+    }
