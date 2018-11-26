@@ -9,6 +9,7 @@ resource "aws_instance" "rukshankweb" {
   subnet_id = "subnet-04adf818d05d0928f"
   associate_public_ip_address = true
   vpc_security_group_ids = ["sg-04c7ac1c35820a26c"]
+  user_data = "${file("install.sh")}"
 
  tags {
  Name = "rukshankweb"
